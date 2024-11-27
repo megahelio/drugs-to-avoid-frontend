@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="es-ES" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="1737753151350322492" datatype="html">
+        <source>
+          <x id="PH" equiv-text="&apos;Mensaje&apos;"/>
+        </source>
+      </trans-unit>
+      <trans-unit id="1061725111721667496" datatype="html">
+        <source>Insertar url de alerta sanitaria</source>
+      </trans-unit>
+      <trans-unit id="2714053642019713309" datatype="html">
+        <source> Formato inválido. Debe ser una URL (por ejemplo, https://example.com/example). </source>
+      </trans-unit>
+      <trans-unit id="6503613780068201083" datatype="html">
+        <source>Añadir</source>
+      </trans-unit>
+      <trans-unit id="7561060183100598492" datatype="html">
+        <source>Salir</source>
+      </trans-unit>
+      <trans-unit id="5357661269973482487" datatype="html">
+        <source>Nombre</source>
+      </trans-unit>
+      <trans-unit id="9059036677934364245" datatype="html">
+        <source>Indicación</source>
+      </trans-unit>
+      <trans-unit id="5981995951089643019" datatype="html">
+        <source>Benecificios de evitar</source>
+      </trans-unit>
+      <trans-unit id="8372270531274326401" datatype="html">
+        <source>Razones para evitarlo</source>
+      </trans-unit>
+      <trans-unit id="6885359129285495476" datatype="html">
+        <source>Alternativa</source>
+      </trans-unit>
+      <trans-unit id="1581465907801427953" datatype="html">
+        <source> Formato inválido. Debe ser idioma_PAÍS (por ejemplo, en_US). </source>
+      </trans-unit>
+      <trans-unit id="8284705088749866157" datatype="html">
+        <source>Crear</source>
+      </trans-unit>
+      <trans-unit id="1271083607370836560" datatype="html">
+        <source>ATC</source>
+      </trans-unit>
+      <trans-unit id="6780407325174304229" datatype="html">
+        <source>Locale</source>
+      </trans-unit>
+      <trans-unit id="2702769239797460498" datatype="html">
+        <source>Descripción</source>
+      </trans-unit>
+      <trans-unit id="691611260825084890" datatype="html">
+        <source>Agregar idioma</source>
+      </trans-unit>
+      <trans-unit id="1372173599787735409" datatype="html">
+        <source>Guardar</source>
+      </trans-unit>
+      <trans-unit id="4419224626903694146" datatype="html">
+        <source>Filtrar por ATC</source>
+      </trans-unit>
+      <trans-unit id="2656760189624669010" datatype="html">
+        <source>Acciones</source>
+      </trans-unit>
+      <trans-unit id="6482785110742420849" datatype="html">
+        <source>Limpiar Filtros</source>
+      </trans-unit>
+      <trans-unit id="7988634649734925802" datatype="html">
+        <source>Alertas sanitarias</source>
+      </trans-unit>
+      <trans-unit id="1731365294656855152" datatype="html">
+        <source>Agregar traducción</source>
+      </trans-unit>
+      <trans-unit id="2589919285146806110" datatype="html">
+        <source>Agregar Alerta Sanitaria</source>
+      </trans-unit>
+      <trans-unit id="428679560308379698" datatype="html">
+        <source>Filtrar por Nombre</source>
+      </trans-unit>
+      <trans-unit id="2791731574457153596" datatype="html">
+        <source>Filtrar por Indicación </source>
+      </trans-unit>
+      <trans-unit id="4687179404476608874" datatype="html">
+        <source> Indicación</source>
+      </trans-unit>
+      <trans-unit id="2178370937192867897" datatype="html">
+        <source> Alternativa sugerida </source>
+      </trans-unit>
+      <trans-unit id="2874458093131951547" datatype="html">
+        <source> Beneficios Evitando </source>
+      </trans-unit>
+      <trans-unit id="4126363965103577676" datatype="html">
+        <source> Razones para evitar</source>
+      </trans-unit>
+      <trans-unit id="9069515260430339622" datatype="html">
+        <source> Alertas Sanitarias</source>
+      </trans-unit>
+      <trans-unit id="1231468650233565543" datatype="html">
+        <source>Porqué evitarlo</source>
+      </trans-unit>
+      <trans-unit id="8799799277828437954" datatype="html">
+        <source>Alertas Sanitarias</source>
+      </trans-unit>
+      <trans-unit id="7956566938889547368" datatype="html">
+        <source>Administrador</source>
+      </trans-unit>
+      <trans-unit id="9188234845278587237" datatype="html">
+        <source>Búsqueda</source>
+      </trans-unit>
+      <trans-unit id="8752683350539801997" datatype="html">
+        <source>Ver todo</source>
+      </trans-unit>
+      <trans-unit id="6501638725992727614" datatype="html">
+        <source>Acceso</source>
+      </trans-unit>
+      <trans-unit id="7726627709568407540" datatype="html">
+        <source>Gestión Medicamentos</source>
+      </trans-unit>
+      <trans-unit id="8920177698004103646" datatype="html">
+        <source>Gestión ATCs</source>
+      </trans-unit>
+      <trans-unit id="6638222819456561162" datatype="html">
+        <source>Desconectar</source>
+      </trans-unit>
+      <trans-unit id="6284352422328530935" datatype="html">
+        <source>Base de datos de medicamentos a evitar</source>
+      </trans-unit>
+      <trans-unit id="8397943190009330532" datatype="html">
+        <source>Introduce el nombre de un medicamento</source>
+      </trans-unit>
+      <trans-unit id="6756465232375944724" datatype="html">
+        <source>Introduce un medicamento</source>
+      </trans-unit>
+      <trans-unit id="9016536884183098576" datatype="html">
+        <source>Usuario</source>
+      </trans-unit>
+      <trans-unit id="7132730488496169673" datatype="html">
+        <source>Contraseña</source>
+      </trans-unit>
+      <trans-unit id="2267635167216034640" datatype="html">
+        <source>Acceder</source>
+      </trans-unit>
+      <trans-unit id="8637521178949912801" datatype="html">
+        <source>Reiniciar</source>
+      </trans-unit>
+      <trans-unit id="1486047849353348650" datatype="html">
+        <source>Medicamento <x id="INTERPOLATION" equiv-text="{{id}}"/> no encontrado</source>
+      </trans-unit>
+      <trans-unit id="3459838205082673693" datatype="html">
+        <source>Editar Medicamento</source>
+      </trans-unit>
+      <trans-unit id="3681895013434235173" datatype="html">
+        <source>Añadir ATC</source>
+      </trans-unit>
+      <trans-unit id="7051338034746410897" datatype="html">
+        <source>Añadir Medicamento</source>
+      </trans-unit>
+      <trans-unit id="8530076473781994923" datatype="html">
+        <source>Editar ATC</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

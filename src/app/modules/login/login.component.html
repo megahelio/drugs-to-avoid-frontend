@@ -1,0 +1,27 @@
+<div ID="login-form-container">
+    <h3 i18n>Acceso</h3>
+    <form [formGroup]="loginForm" #formDir="ngForm" (ngSubmit)="onLogin()">
+        <div ID="form-content">
+            <mat-form-field>
+                <mat-label i18n for="username">Usuario</mat-label>
+                <input matInput id="username" formControlName="username">
+                <mat-error *ngIf="username.invalid && (username!.dirty || username!.touched)">
+                    <span *ngIf="username.errors!.required">Required<br></span>
+                    <span *ngIf="username.errors!.whitespace">No Whitespaces Allowed<br></span>
+                    <span *ngIf="username.errors!.maxlength">Max Length is 32<br></span>
+                    <span *ngIf="username.errors!.minlength">Min Length is 4<br></span>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label i18n>Contraseña</mat-label>
+                <input matInput type="password" formControlName="password">
+            </mat-form-field>
+        </div>
+        <div ID="form-actions">
+            <button i18n mat-raised-button type="submit">Acceder</button>
+            <button i18n mat-raised-button type="reset">Reiniciar</button>
+        </div>
+    </form>
+
+</div>

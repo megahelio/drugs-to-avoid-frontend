@@ -1,0 +1,19 @@
+<div class="drugSearchTittle">
+    <div class="text-center">
+        <img id="tittle_logo" src="assets/logo.svg" alt="Drugs To Avoid" />
+        <h3 i18n>Base de datos de medicamentos a evitar</h3>
+    </div>
+</div>
+<div id="search-bar">
+    <mat-form-field>
+        <mat-label id="large-label" i18n>Introduce el nombre de un medicamento</mat-label>
+        <mat-label id="small-label" i18n>Introduce un medicamento</mat-label>
+        <span>
+            <input matInput [(ngModel)]="nameToSearch" type="text" name="nameToSearch" (keydown.enter)="search()">
+            <i (click)="search()" class=" material-icons">search</i>
+        </span>
+    </mat-form-field>
+</div>
+<div class="history" *ngIf="drugSearched.length>0">
+    <app-drug-element *ngFor="let drug of drugSearched; let i = index" [drug]="drug"></app-drug-element>
+</div>

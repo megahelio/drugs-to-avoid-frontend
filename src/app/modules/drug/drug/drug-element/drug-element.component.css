@@ -1,0 +1,45 @@
+mat-card-content {
+
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.main-card {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    background-color: var(--fif-color);
+}
+
+a {
+
+    display: grid;
+    grid-template-columns: 5% 95%;
+    text-overflow: ellipsis;
+}
+
+.alert-text {
+    font-weight: 400;
+    width: 200px;
+    white-space: nowrap;
+    margin-top: 0.5rem;
+    justify-self: center;
+}
+
+mat-icon {
+    margin-top: 0.5rem;
+    justify-self: center;
+    align-self: start;
+    size: 5rem;
+}
+
+
+
+@media only screen and (max-width: 650px) {
+    mat-card-content {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-row-gap: 10px;
+    }
+}

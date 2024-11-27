@@ -1,0 +1,78 @@
+<mat-dialog-content>
+    <mat-card class="main-card" *ngIf="drug">
+        <mat-card-header>
+            <mat-card-title>
+                <h1>{{ drug.name }}</h1>
+            </mat-card-title>
+            <mat-card-subtitle>{{ drug.atcName }} - {{ drug.atcDescription }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>
+                        <h1 i18n>
+                            Indicación</h1>
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    {{ drug.indication }}
+                </mat-card-content>
+            </mat-card>
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>
+                        <h1 i18n>
+                            Alternativa sugerida
+                        </h1>
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    {{ drug.alternativeProposalPrescribe }}
+                </mat-card-content>
+            </mat-card>
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>
+                        <h1 i18n> Beneficios Evitando </h1>
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content> {{ drug.benefitsAvoid }}</mat-card-content>
+            </mat-card>
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>
+                        <h1 i18n> Razones para evitar</h1>
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    {{ drug.reasonWhyToAvoid }}
+                </mat-card-content>
+            </mat-card>
+
+            <mat-card *ngIf="drug.sanitaryAlerts.length!=0">
+                <mat-card-header>
+                    <mat-card-title>
+                        <h1 i18n> Alertas Sanitarias</h1>
+                    </mat-card-title>
+
+                </mat-card-header>
+
+                <mat-card-content>
+                    <a mat-raised-button href={{alert}} *ngFor="let alert of drug.sanitaryAlerts" target="_blank">
+                        <mat-icon svgIcon="reference">reference</mat-icon>
+                        <p class="alert-text">{{alert | extractLastSegment}}</p>
+                    </a>
+                </mat-card-content>
+            </mat-card>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="main-card" *ngIf="drugMissed">
+        <mat-card-header>
+            <mat-card-title>
+                <h1 i18n>Medicamento {{id}} no encontrado</h1>
+            </mat-card-title>
+        </mat-card-header>
+
+    </mat-card>
+</mat-dialog-content>

@@ -1,0 +1,114 @@
+<div class="tableContent">
+
+    <mat-table matSort [dataSource]="dataSource">
+
+
+        <ng-container matColumnDef="name">
+            <mat-header-cell class="name name-header" *matHeaderCellDef mat-sort-header>
+                <h2 i18n>Nombre</h2>
+            </mat-header-cell>
+            <mat-cell class="name" *matCellDef="let row">
+                <button (click)="onShowDrug(row.drugId)" mat-raised-button>{{row.name}}</button>
+            </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="NAME_FILTER">
+            <mat-header-cell class="name filters-row" *matHeaderCellDef>
+                <mat-form-field>
+                    <mat-label i18n>Filtrar por Nombre</mat-label>
+                    <input matInput [formControl]="nameFilter" type="text">
+                </mat-form-field>
+            </mat-header-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="indication">
+            <mat-header-cell class="indication" mat-header-cell *matHeaderCellDef mat-sort-header>
+                <h2 i18n>Indicación</h2>
+            </mat-header-cell>
+            <mat-cell class="indication" mat-cell *matCellDef="let row">{{row.indication}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="INDICATION_FILTER">
+            <mat-header-cell class="indication filters-row" *matHeaderCellDef>
+                <mat-form-field>
+                    <mat-label i18n>Filtrar por Indicación </mat-label>
+                    <input matInput [formControl]="indicationFilter" type="text">
+                </mat-form-field>
+            </mat-header-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="benefitsAvoid">
+            <mat-header-cell class="benefitsAvoid" mat-header-cell *matHeaderCellDef mat-sort-header>
+                <h2>De Evitarlo</h2>
+            </mat-header-cell>
+            <mat-cell class="benefitsAvoid" mat-cell *matCellDef="let row">{{row.benefitsAvoid}}</mat-cell>
+        </ng-container>
+
+
+        <ng-container matColumnDef="reasonWhyToAvoid">
+            <mat-header-cell class="reasonWhyToAvoid" mat-header-cell *matHeaderCellDef mat-sort-header>
+                <h2 i18n>Porqué evitarlo</h2>
+            </mat-header-cell>
+            <mat-cell class="reasonWhyToAvoid" mat-cell *matCellDef="let row">{{row.reasonWhyToAvoid}}</mat-cell>
+        </ng-container>
+
+
+        <ng-container matColumnDef="alternativeProposalPrescribe">
+            <mat-header-cell class="alternativeProposalPrescribe" mat-header-cell *matHeaderCellDef mat-sort-header>
+                <h2 i18n>Alternativa</h2>
+            </mat-header-cell>
+            <mat-cell class="alternativeProposalPrescribe" mat-cell
+                *matCellDef="let row">{{row.alternativeProposalPrescribe}}</mat-cell>
+        </ng-container>
+
+
+        <ng-container matColumnDef="classificationATC">
+            <mat-header-cell class="classificationATC" mat-header-cell *matHeaderCellDef mat-sort-header>
+                <h2 i18n>ATC</h2>
+            </mat-header-cell>
+            <mat-cell class="classificationATC" mat-cell *matCellDef="let row">
+                <span [matTooltipClass]="{ 'tool-tip': true }" matTooltip={{row.atcDescription}}>
+                    {{row.atcName}}
+                </span>
+            </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="CLASSIFICATIONATC_FILTER">
+            <mat-header-cell class="classificationATC filters-row" *matHeaderCellDef>
+                <mat-form-field>
+                    <mat-label i18n>Filtrar por ATC</mat-label>
+                    <input matInput [formControl]="atcName" type="text">
+                </mat-form-field>
+            </mat-header-cell>
+        </ng-container>
+        <ng-container matColumnDef="alertLinks">
+            <mat-header-cell class="alert-links" mat-header-cell *matHeaderCellDef mat-sort-header>
+                <h2 i18n>Alertas Sanitarias</h2>
+            </mat-header-cell>
+            <mat-cell class="alert-links" mat-cell *matCellDef="let row">
+                <span [matTooltipClass]="{'tool-tip': true}"
+                    *ngFor="let sanitaryAlert of row.sanitaryAlerts | slice:0:3" matTooltip={{sanitaryAlert}}>
+                    <a href={{sanitaryAlert}} target="_blank"><button mat-raised-button><mat-icon
+                                svgIcon="reference"></mat-icon> </button></a>
+                </span>
+            </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="CLEAR_FILTER">
+            <mat-header-cell class="clear-filters filters-row" *matHeaderCellDef>
+                <button mat-raised-button>
+                    <span (click)="onClearFilters()" matTooltip=" Limpiar Filtros">
+                        <mat-icon svgIcon="clear-filters"></mat-icon>
+                        Limpiar Filtros
+                    </span>
+                </button>
+            </mat-header-cell>
+        </ng-container>
+
+
+        <mat-header-row id="header_filters" *matHeaderRowDef="filterColumns" class="filters-row"></mat-header-row>
+        <mat-header-row id="header_data" *matHeaderRowDef="dataColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: dataColumns;"></mat-row>
+    </mat-table>
+</div>
+<div class="paginator">
+    <mat-paginator #paginator [length]="dataSource.data.length" [pageIndex]="0" [pageSize]="10"
+        [pageSizeOptions]="[5, 10, 25, 45]" aria-label="Select page">
+    </mat-paginator>
+</div>

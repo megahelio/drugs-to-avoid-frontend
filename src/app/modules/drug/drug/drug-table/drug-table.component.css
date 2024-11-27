@@ -1,0 +1,110 @@
+body {
+    background-color: var(--main-color);
+}
+
+input {
+    width: 100%;
+}
+
+
+.clear-filters {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+.clear-filters * {
+    display: flex;
+    justify-content: center;
+    padding-right: 5px;
+}
+
+
+.alert-links {
+    justify-content: center;
+    text-align: center;
+    flex-grow: 0.8;
+}
+
+
+input, mat-form-field, mat-header-cell {
+    width: 100%;
+}
+
+
+mat-form-field {
+    padding-top: 5px;
+}
+
+mat-label {
+    font-size: 14px;
+}
+
+
+.tableContent {
+    margin-left: 5vw;
+    width: 90vw;
+    height: 80vh;
+    overflow: scroll;
+    margin-top: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+mat-header-row {
+    position: sticky;
+
+}
+
+#header_data {
+    background: var(--main-color);
+}
+
+h2 {
+    font-size: 22px;
+    margin: 0px;
+    color: white;
+}
+
+.paginator {
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#header_filters {
+    margin-top: 1rem;
+}
+
+
+
+@media only screen and (max-width: 650px) {
+    .filters-row {
+        flex-direction: column;
+    }
+
+    .mat-column-NAME_FILTER {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    mat-header-cell {
+        margin-top: 0.75rem;
+    }
+
+    .tableContent {
+        margin-left: 0vw;
+        width: 100vw;
+    }
+
+    .indication {
+        flex-grow: 2;
+    }
+
+    .name {
+        flex-grow: 2;
+
+    }
+}

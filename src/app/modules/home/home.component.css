@@ -1,0 +1,72 @@
+.drugSearchTittle {
+    flex: 0 0 auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+#small-label {
+    display: none;
+}
+
+#tittle_logo {
+    width: 25rem;
+    margin: 2rem;
+}
+
+.history {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+h3 {
+    font-family: Prompt;
+    font-weight: bolder;
+    font-size: 1.7rem;
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+}
+
+span {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#search-bar {
+    padding-top: 5vh;
+    display: flex;
+
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#search-bar>* {
+    width: 25rem;
+}
+
+@media only screen and (max-width: 480px) {
+
+    #search-bar>* {
+        width: 17rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    #tittle_logo {
+        width: 17rem;
+    }
+
+    #small-label {
+        display: inline;
+    }
+
+    #large-label {
+        display: none;
+    }
+}

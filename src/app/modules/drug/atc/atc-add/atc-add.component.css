@@ -1,0 +1,12 @@
+mat-card-content {
+    overflow-y: auto;
+    max-height: calc(90vh - 160px);
+}
+
+form {
+    margin-top: 10px;
+}
+
+mat-card-header {
+    justify-content: center;
+}

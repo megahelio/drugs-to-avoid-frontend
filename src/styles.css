@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+
+    --main-color: #036596;
+    --secondary-color: #FE3235;
+    --th-color: black;
+    --fourth-color: #E5F2C9;
+    --fif-color: #A0D2DB;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.text-center {
+    text-align: center;
+}
+
+a {
+    color: black;
+}
+
+.flex {
+    display: flex;
+}
+
+.contenedor-azul {
+    flex: 1 1 auto;
+    background-color: var(--main-color);
+}

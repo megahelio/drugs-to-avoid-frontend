@@ -1,0 +1,31 @@
+<mat-card>
+    <mat-card-header>
+        <h1 i18n>Editar ATC</h1>
+    </mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="atcForm">
+            <mat-form-field>
+                <mat-label id="large-label" i18n>ATC</mat-label>
+                <input matInput type="text" id="atc" formControlName="atc" class="form-control">
+            </mat-form-field>
+            <div formArrayName="descriptions">
+                <div *ngFor="let language of atcLanguages; let i = index" [formGroupName]="i">
+                    <mat-form-field>
+                        <mat-label id="large-label" i18n>Locale</mat-label>
+                        <input matInput type="text" formControlName="locale" class="form-control">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label id="large-label" i18n>Descripción</mat-label>
+                        <textarea matInput type="text" formControlName="description" class="form-control"></textarea>
+                    </mat-form-field>
+                    <button mat-raised-button [disabled]="i==0" (click)="removeLanguage(i)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <button mat-raised-button i18n (click)='onAddLanguage()'>Agregar idioma</button>
+            <button mat-raised-button i18n (click)='onSubmit()' [disabled]="atcForm.invalid">Guardar</button>
+            <button mat-raised-button i18n (click)='onExit()'>Salir</button>
+        </form>
+    </mat-card-content>
+</mat-card>

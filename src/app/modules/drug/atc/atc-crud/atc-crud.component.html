@@ -1,0 +1,57 @@
+<div class="tableContent">
+    <nav>
+        <button mat-raised-button (click)="onAtcAdd()"><mat-icon>add</mat-icon></button>
+    </nav>
+    <mat-table matSort [dataSource]=" dataSource">
+
+        <ng-container matColumnDef="classificationATC">
+            <mat-header-cell class="classificationATC" mat-header-cell *matHeaderCellDef mat-sort-header>
+                <h2 i18n>ATC</h2>
+            </mat-header-cell>
+            <mat-cell class="classificationATC" mat-cell *matCellDef="let row"><button mat-raised-button
+                    (click)="onAtcShow(row)">{{row}}</button>
+            </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="CLASSIFICATIONATC_FILTER">
+            <mat-header-cell class="classificationATC filters-row" *matHeaderCellDef>
+                <mat-form-field>
+                    <mat-label i18n>Filtrar por ATC</mat-label>
+                    <input matInput [formControl]="atcName" type="text">
+                </mat-form-field>
+            </mat-header-cell>
+        </ng-container>
+        <ng-container matColumnDef="actions">
+            <mat-header-cell  class="actions" mat-header-cell *matHeaderCellDef mat-sort-header>
+                <h2 i18n>Acciones</h2>
+            </mat-header-cell>
+            <mat-cell class="actions" *matCellDef="let row">
+                <span>
+                    <button mat-raised-button (click)="onEditAtc(row)"><mat-icon>edit</mat-icon></button>
+                    <button mat-raised-button (click)="onDeleteAtc(row)"><mat-icon>delete</mat-icon></button>
+                </span>
+            </mat-cell>
+        </ng-container>
+
+
+        <ng-container matColumnDef="CLEAR_FILTER">
+            <mat-header-cell class="clear-filters filters-row" *matHeaderCellDef>
+                <button mat-raised-button>
+                    <span (click)="onClearFilters()" matTooltip=" Limpiar Filtros">
+                        <mat-icon svgIcon="clear-filters"></mat-icon>
+                        <span i18n>Limpiar Filtros</span>
+                    </span>
+                </button>
+            </mat-header-cell>
+        </ng-container>
+
+
+        <mat-header-row id="header_filters" *matHeaderRowDef="filterColumns" class="filters-row"></mat-header-row>
+        <mat-header-row id="header_data" *matHeaderRowDef="dataColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: dataColumns;"></mat-row>
+    </mat-table>
+</div>
+<div class="paginator">
+    <mat-paginator #paginator [length]="dataSource.data.length" [pageIndex]="0" [pageSize]="10"
+        [pageSizeOptions]="[5, 10, 25, 45]" aria-label="Select page">
+    </mat-paginator>
+</div>

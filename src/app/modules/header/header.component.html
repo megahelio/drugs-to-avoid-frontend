@@ -1,0 +1,39 @@
+<div class="container">
+    <a class="logo" href="/">
+        <img id="logo" src="assets/dta-logo.png" />
+    </a>
+    <div *ngIf="isLogin()">
+        <h1 i18n>Administrador</h1>
+    </div>
+    <div class="container-end">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon id="menu">more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/home">
+                <i class="material-icons">search</i>
+                <span i18n>Búsqueda</span>
+            </button>
+            <button mat-menu-item routerLink="/drugs">
+                <i class="material-icons">table_view</i>
+                <span i18n>Ver todo</span>
+            </button>
+            <button *ngIf="!isLogin()" mat-menu-item routerLink="/login">
+                <i class="material-icons">login</i>
+                <span i18n>Acceso</span>
+            </button>
+            <button *ngIf="isLogin()" mat-menu-item routerLink="/drugs/crud/drug">
+                <i class="material-icons">settings</i>
+                <span i18n>Gestión Medicamentos</span>
+            </button>
+            <button *ngIf="isLogin()" mat-menu-item routerLink="/drugs/crud/atc">
+                <i class="material-icons">settings</i>
+                <span i18n>Gestión ATCs</span>
+            </button>
+            <button *ngIf="isLogin()" mat-menu-item (click)="onLogOut()">
+                <i class="material-icons">logout</i>
+                <span i18n>Desconectar</span>
+            </button>
+        </mat-menu>
+    </div>
+</div>

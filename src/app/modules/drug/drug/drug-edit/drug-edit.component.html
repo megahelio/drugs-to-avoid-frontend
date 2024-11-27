@@ -1,0 +1,39 @@
+<mat-card>
+    <mat-card-header>
+        <h1 i18n>Editar Medicamento</h1>
+    </mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="atcNameForm">
+            <mat-form-field>
+                <mat-label id="large-label" i18n>ATC</mat-label>
+                <mat-select matInput type="text" id="atcName" formControlName="atcName" class="form-control">
+                    @for (option of atcOptions; track option) {
+                    <mat-option [value]="option">{{option}}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+
+        </form>
+        <mat-tab-group>
+            <mat-tab *ngFor="let translation of languageTabsArray; let index = index" label={{translation}}>
+                <app-add-tab></app-add-tab>
+                <button mat-raised-button [disabled]="translation=='es_ES'" (click)="removeTab(index)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </mat-tab>
+        </mat-tab-group>
+        <h2 i18n *ngIf="sanitaryAlertsLinks.length>0">Alertas sanitarias</h2>
+        <ul>
+            <li *ngFor="let sanitaryAlert of sanitaryAlertsLinks;let index = index">{{sanitaryAlert}} <button
+                    mat-raised-button (click)='onDeleteSanitaryAlert(index)'><mat-icon>delete</mat-icon></button></li>
+        </ul>
+
+
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button i18n (click)='onAddTranslation()'>Agregar traducción</button>
+        <button mat-raised-button i18n (click)='onAddSanitaryAlert()'>Agregar Alerta Sanitaria</button>
+        <button mat-raised-button i18n (click)='onSubmit()' [disabled]="atcNameForm.invalid">Guardar</button>
+        <button mat-raised-button i18n (click)='onExit()'>Salir</button>
+    </mat-card-actions>
+</mat-card>
