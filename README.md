@@ -1,29 +1,33 @@
-# Front-end Medicamentos con Balance Negativo
+# 💊 drugs-to-avoid-frontend
 
-Este es un proyecto Angular para una SPA de medicamentos con balance negativo.
+Frontend del proyecto Drugs to Avoid, desarrollado como parte del Grado en Ingeniería Informática.
+## 🧾 Descripción
 
-## Compilación de la Aplicación
+Interfaz de usuario construida con Angular para visualizar y gestionar información sobre medicamentos con balance riesgo-beneficio negativo. Incluye soporte para internacionalización.
+## 📁 Estructura del proyecto
 
-Para compilar la aplicación, sigue estos pasos:
+   - src/: Código fuente principal de la aplicación Angular.
+   - angular.json: Configuración del proyecto Angular.
+   - package.json: Dependencias y scripts del proyecto.
 
-### Extraer y Convertir Archivos de Internacionalización
+## 🛠 Requisitos
 
-Antes de compilar la aplicación, necesitas extraer los archivos de internacionalización y convertirlos al formato necesario.
+   - Node.js 14 o superior.
+   - Angular CLI 12 o superior.
 
-[xlf2xlf](https://github.com/chekit/xlf2xlf.git)
+## 🚀 Ejecución
 
-```bash
-ng extract-i18n && xlf2xlf -i src/locale/messages.xlf -o src/locale/messages.en.xlf -f es -t en
+1. Clona el repositorio:
 ```
-
-Este comando extraerá los archivos de internacionalización y los convertirá al formato deseado.
-
-### Compilar la Aplicación
-
-Una vez que hayas extraído y convertido los archivos de internacionalización, puedes compilar la aplicación.
-
-```bash
-ng build --localize
+git clone https://github.com/megahelio/drugs-to-avoid-frontend.git
+cd drugs-to-avoid-frontend
 ```
-
-Este comando compilará la aplicación y generará los archivos necesarios para la versión localizada. Los distribuibles se encuentran en el directorio *dist*.
+2. Instala las dependencias:
+```
+npm install
+```
+3. Ejecuta la aplicación:
+```
+ng serve
+```
+La aplicación estará disponible en http://localhost:4200.
